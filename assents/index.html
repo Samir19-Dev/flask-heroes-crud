@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>CRUD de Héroes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>CRUD de Héroes</h1>
+        <div class="mb-3">
+            <button id="btn-listar" class="btn btn-primary">Listar Héroes</button>
+            <button id="btn-crear" class="btn btn-success">Crear Héroe</button>
+        </div>
+        <div id="heroes-container" class="row"></div>
+        <form id="form-hero" class="mt-4 d-none">
+            <h2 id="form-titulo">Agregar Héroe</h2>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="habilidad" class="form-label">Habilidad</label>
+                <input type="text" id="habilidad" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">URL de Imagen</label>
+                <input type="url" id="imagen" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="compania" class="form-label">Compañía</label>
+                <select id="compania" class="form-select" required>
+                    <option value="">Selecciona una compañía</option>
+                    <option value="Marvel">Marvel</option>
+                    <option value="DC">DC</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="genero" class="form-label">Género</label>
+                <select id="genero" class="form-select" required>
+                    <option value="">Selecciona un género</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea id="descripcion" class="form-control" required></textarea>
+            </div>
+            <button type="button" id="boton-guardar" class="btn btn-primary">Agregar Héroe</button>
+            <button type="button" class="btn btn-secondary" onclick="resetearFormulario()">Cancelar</button>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
